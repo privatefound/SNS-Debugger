@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/logo.svg" alt="SNS Debugger logo" width="120">
-
 # SNS Debugger
 
 **A terminal UI to read and troubleshoot Stormshield Network Security (SNS) firewall logs over SSH.**
@@ -62,8 +60,8 @@ format and gives you a filterable, colour-coded table in your terminal.
 ## Installation
 
 ```bash
-git clone https://github.com/privatefound/Stormshield-SNS-Debugger
-cd Stormshield-SNS-Debugger
+git clone https://github.com/privatefound/sns-debugger.git
+cd sns-debugger
 ./sns-debug
 ```
 
@@ -76,7 +74,7 @@ Manual setup, if you prefer:
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -r requirements.txt
-.venv/bin/python stormshield_debugger.py
+.venv/bin/python sns_debugger.py
 ```
 
 ## Usage

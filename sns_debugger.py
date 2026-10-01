@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Stormshield SNS Debugger - mini TUI da terminale per leggere i log del firewall via SSH.
+"""SNS Debugger - mini TUI da terminale per leggere i log del firewall via SSH.
 
 Uso:
-    python stormshield_debugger.py              # chiede IP e password
-    python stormshield_debugger.py -u admin -p 22 10.0.0.254
-    python stormshield_debugger.py --demo       # dati finti, per provare l'interfaccia
+    python sns_debugger.py              # chiede IP e password
+    python sns_debugger.py -u admin -p 22 10.0.0.254
+    python sns_debugger.py --demo       # dati finti, per provare l'interfaccia
 """
 from __future__ import annotations
 
@@ -433,7 +433,7 @@ class StatsScreen(ModalScreen):
 
 
 class DebuggerApp(App):
-    TITLE = "Stormshield SNS Debugger"
+    TITLE = "SNS Debugger"
     CSS = """
     TabbedContent { height: 1fr; }
     TabPane { height: 1fr; padding: 0; }
@@ -817,7 +817,7 @@ def connect_interactive(args) -> SSHConnection:
     host = args.host
     for attempt in range(3):
         while not host:
-            host = input("IP firewall Stormshield: ").strip()
+            host = input("IP del firewall: ").strip()
         password = getpass.getpass(f"Password per {args.user}@{host}: ")
         print(f"Connessione a {host}:{args.port} ...", flush=True)
         try:
@@ -835,7 +835,7 @@ def connect_interactive(args) -> SSHConnection:
 
 
 def main() -> None:
-    ap = argparse.ArgumentParser(description="Debugger log per firewall Stormshield SNS")
+    ap = argparse.ArgumentParser(description="SNS Debugger - lettura log firewall via SSH")
     ap.add_argument("host", nargs="?", help="IP del firewall (se omesso viene chiesto)")
     ap.add_argument("-u", "--user", default="admin", help="utente SSH (default: admin)")
     ap.add_argument("-p", "--port", type=int, default=22, help="porta SSH (default: 22)")
