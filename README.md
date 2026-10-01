@@ -131,7 +131,7 @@ Run commands on the appliance (`ifconfig`, `netstat -rn`, `tcpdump -n -c 50 -i <
 Pick a preset on the left, edit it, press Enter. Long-running commands can be interrupted with **Stop**.
 
 > [!WARNING]
-> Commands run as `admin` on a production security device. Know what you are typing.
+> Commands run as `admin` on a production security device. Do not push random commands pls push commands only if you know what you're doing.
 
 ## Security notes
 
