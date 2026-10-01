@@ -1,0 +1,7 @@
+#!/bin/sh
+# Avvia lo Stormshield debugger creando il virtualenv al primo avvio
+DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ ! -x "$DIR/.venv/bin/python" ]; then
+    python3 -m venv "$DIR/.venv" && "$DIR/.venv/bin/pip" install -q -r "$DIR/requirements.txt" || exit 1
+fi
+exec "$DIR/.venv/bin/python" "$DIR/stormshield_debugger.py" "$@"
