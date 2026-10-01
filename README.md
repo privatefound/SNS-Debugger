@@ -62,9 +62,9 @@ format and gives you a filterable, colour-coded table in your terminal.
 ## Installation
 
 ```bash
-git clone https://github.com/<your-user>/sns-debugger.git
-cd sns-debugger
-./sns-debug --demo
+git clone https://github.com/privatefound/Stormshield-SNS-Debugger
+cd Stormshield-SNS-Debugger
+./sns-debug
 ```
 
 The `sns-debug` launcher creates a local virtual environment (`.venv`) and installs the
@@ -159,4 +159,4 @@ risk and in accordance with your organisation's policies.
 
 ## License
 
-[MIT](LICENSE) © Stormshield Debugger contributors
+[MIT](LICENSE) © Privatefound
